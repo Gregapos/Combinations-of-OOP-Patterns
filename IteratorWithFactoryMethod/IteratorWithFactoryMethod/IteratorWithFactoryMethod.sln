@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IteratorWithFactoryMethod", "IteratorWithFactoryMethod\IteratorWithFactoryMethod.csproj", "{A977B27B-E237-4AFC-8772-4CEBE27F5730}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IteratorWithFactory", "..\..\IteratorWithFactory\IteratorWithFactory.csproj", "{AC24DC47-13D1-4AF9-8587-9A1A1A749C5D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A977B27B-E237-4AFC-8772-4CEBE27F5730}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A977B27B-E237-4AFC-8772-4CEBE27F5730}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A977B27B-E237-4AFC-8772-4CEBE27F5730}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A977B27B-E237-4AFC-8772-4CEBE27F5730}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC24DC47-13D1-4AF9-8587-9A1A1A749C5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC24DC47-13D1-4AF9-8587-9A1A1A749C5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC24DC47-13D1-4AF9-8587-9A1A1A749C5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC24DC47-13D1-4AF9-8587-9A1A1A749C5D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,15 @@
+C:\Users\Gregapos\Projects\Patterns\WitoutBuilderAbstractFactory\bin\Debug\net7.0\WitoutBuilderAbstractFactory.exe
+C:\Users\Gregapos\Projects\Patterns\WitoutBuilderAbstractFactory\bin\Debug\net7.0\WitoutBuilderAbstractFactory.deps.json
+C:\Users\Gregapos\Projects\Patterns\WitoutBuilderAbstractFactory\bin\Debug\net7.0\WitoutBuilderAbstractFactory.runtimeconfig.json
+C:\Users\Gregapos\Projects\Patterns\WitoutBuilderAbstractFactory\bin\Debug\net7.0\WitoutBuilderAbstractFactory.dll
+C:\Users\Gregapos\Projects\Patterns\WitoutBuilderAbstractFactory\bin\Debug\net7.0\WitoutBuilderAbstractFactory.pdb
+C:\Users\Gregapos\Projects\Patterns\WitoutBuilderAbstractFactory\obj\Debug\net7.0\WitoutBuilderAbstractFactory.csproj.AssemblyReference.cache
+C:\Users\Gregapos\Projects\Patterns\WitoutBuilderAbstractFactory\obj\Debug\net7.0\WitoutBuilderAbstractFactory.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gregapos\Projects\Patterns\WitoutBuilderAbstractFactory\obj\Debug\net7.0\WitoutBuilderAbstractFactory.AssemblyInfoInputs.cache
+C:\Users\Gregapos\Projects\Patterns\WitoutBuilderAbstractFactory\obj\Debug\net7.0\WitoutBuilderAbstractFactory.AssemblyInfo.cs
+C:\Users\Gregapos\Projects\Patterns\WitoutBuilderAbstractFactory\obj\Debug\net7.0\WitoutBuilderAbstractFactory.csproj.CoreCompileInputs.cache
+C:\Users\Gregapos\Projects\Patterns\WitoutBuilderAbstractFactory\obj\Debug\net7.0\WitoutBuilderAbstractFactory.dll
+C:\Users\Gregapos\Projects\Patterns\WitoutBuilderAbstractFactory\obj\Debug\net7.0\refint\WitoutBuilderAbstractFactory.dll
+C:\Users\Gregapos\Projects\Patterns\WitoutBuilderAbstractFactory\obj\Debug\net7.0\WitoutBuilderAbstractFactory.pdb
+C:\Users\Gregapos\Projects\Patterns\WitoutBuilderAbstractFactory\obj\Debug\net7.0\WitoutBuilderAbstractFactory.genruntimeconfig.cache
+C:\Users\Gregapos\Projects\Patterns\WitoutBuilderAbstractFactory\obj\Debug\net7.0\ref\WitoutBuilderAbstractFactory.dll
