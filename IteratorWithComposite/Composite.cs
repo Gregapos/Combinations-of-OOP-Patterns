@@ -2,55 +2,63 @@ using System.Runtime.CompilerServices;
 
 public abstract class IFileSystemItem
 {
-    protected string name;
+    public string Name {set; get;}
     public abstract void Execute();
-    public virtual void PushItemToStack(Stack<IFileSystemItem> stack) {return;}
+    // public virtual void PushItemToStack(Stack<IFileSystemItem> stack) {return;}
+}
+
+public interface IIterableCollection
+{
+    public IIterator createDFIterator();
 }
 
 public class File : IFileSystemItem
 {
     public File(string name)
     {
-        this.name = name;
+        Name = name;
     }
 
     public override void Execute()
     {
-        Console.WriteLine($"Opened File: {name}");
+        Console.WriteLine($"Opened File: {Name}");
     }
 }
 
-public class Directory : IFileSystemItem
+public class Directory : IFileSystemItem, IIterableCollection
 {
-    private List<IFileSystemItem> _items = new List<IFileSystemItem>();
+    private List<IFileSystemItem> items = new List<IFileSystemItem>();
 
     public Directory(string name)
     {
-        this.name = name;
+        Name = name;
     }
 
     public override void Execute()
     {
-        Console.WriteLine($"Opened Directory: {name}");
-        foreach(var item in _items){
+        Console.WriteLine($"Opened Directory: {Name}");
+        foreach(var item in items){
             item.Execute();
         }
     }
 
     public void Add(IFileSystemItem item)
     {
-        _items.Add(item);
+        items.Add(item);
     }
 
     public void Remove(IFileSystemItem item)
     {
-        _items.Remove(item);
+        items.Remove(item);
     }
 
-    public override void PushItemToStack(Stack<IFileSystemItem> stack) {
-        for (int i = _items.Count - 1; i >= 0; i--)
-        {
-            stack.Push(_items[i]);
-        }
+    public List<IFileSystemItem> GetItems()
+    {
+        return items;
+    }
+
+    public IIterator createDFIterator()
+    {
+        return new DepthFirstFileIterator(this);
     }
 }

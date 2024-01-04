@@ -1,31 +1,28 @@
-﻿public class Program
+﻿using System.Runtime.CompilerServices;
+
+public class Program
 {
     public static void Main(){
-        var root = new Directory("Root");
-        var subDir1 = new Directory("SubDir1");
-        var subDir2 = new Directory("SubDir2");
-        var file1 = new File("File1");
-        var file2 = new File("File2");
+        var root = new Directory("root");
+        var subDir1 = new Directory("subDir1");
+        var subDir2 = new Directory("subDir2");
+        var file1 = new File("file1");
+        var file2 = new File("file2");
+        var file3 = new File("file3");
 
-        root.Add(subDir1);
-        root.Add(subDir2);
         subDir1.Add(file1);
         subDir2.Add(file2);
+        root.Add(subDir1);
+        root.Add(subDir2);
+        root.Add(file3);
 
         // Using DepthFirstFileIterator
-        var depthFirstIterator = new DepthFirstFileIterator(root);
+        var depthFirstIterator = root.createDFIterator();
+    
         while (depthFirstIterator.HasMore())
         {
             var item = depthFirstIterator.GetNext();
-            item.Execute();
+            Console.WriteLine($"Traversed item: {item.Name}");
         }
-
-        // // Using BreadthFirstFileIterator
-        // var breadthFirstIterator = new BreadthFirstFileIterator(root);
-        // while (breadthFirstIterator.HasNext())
-        // {
-        //     var item = breadthFirstIterator.Next();
-        //     item.Display();
-        // }
     }
 }
