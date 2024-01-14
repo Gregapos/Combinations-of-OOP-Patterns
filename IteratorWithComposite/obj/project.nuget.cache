@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "U/A2hUukg7E088wNTdWOezg9enqgOZ5Hn95we6Tt7k9Kb016k2yfAOyIWqi9u4t6LThFmmi99QR/TLVyNfJ9Tw==",
+  "dgSpecHash": "fpygGlveATbhel/t8wKb/yX9Rq//PxUERld2WP5EX3oq3ScGnWSbvz1ygQNdoLpIuEd1E/EYtZUQc1I3OM48AA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Gregapos\\Projects\\Combinations-of-OOP-Patterns\\IteratorWithComposite\\IteratorWithComposite.csproj",
+  "projectFilePath": "C:\\Users\\Gregapos\\Projects\\Patterns\\IteratorWithComposite\\IteratorWithComposite.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

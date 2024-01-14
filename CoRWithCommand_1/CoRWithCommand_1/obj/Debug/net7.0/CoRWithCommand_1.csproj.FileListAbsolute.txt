@@ -1,0 +1,15 @@
+C:\Users\Gregapos\Projects\Patterns\CoRWithCommand_1\CoRWithCommand_1\bin\Debug\net7.0\CoRWithCommand_1.exe
+C:\Users\Gregapos\Projects\Patterns\CoRWithCommand_1\CoRWithCommand_1\bin\Debug\net7.0\CoRWithCommand_1.deps.json
+C:\Users\Gregapos\Projects\Patterns\CoRWithCommand_1\CoRWithCommand_1\bin\Debug\net7.0\CoRWithCommand_1.runtimeconfig.json
+C:\Users\Gregapos\Projects\Patterns\CoRWithCommand_1\CoRWithCommand_1\bin\Debug\net7.0\CoRWithCommand_1.dll
+C:\Users\Gregapos\Projects\Patterns\CoRWithCommand_1\CoRWithCommand_1\bin\Debug\net7.0\CoRWithCommand_1.pdb
+C:\Users\Gregapos\Projects\Patterns\CoRWithCommand_1\CoRWithCommand_1\obj\Debug\net7.0\CoRWithCommand_1.csproj.AssemblyReference.cache
+C:\Users\Gregapos\Projects\Patterns\CoRWithCommand_1\CoRWithCommand_1\obj\Debug\net7.0\CoRWithCommand_1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gregapos\Projects\Patterns\CoRWithCommand_1\CoRWithCommand_1\obj\Debug\net7.0\CoRWithCommand_1.AssemblyInfoInputs.cache
+C:\Users\Gregapos\Projects\Patterns\CoRWithCommand_1\CoRWithCommand_1\obj\Debug\net7.0\CoRWithCommand_1.AssemblyInfo.cs
+C:\Users\Gregapos\Projects\Patterns\CoRWithCommand_1\CoRWithCommand_1\obj\Debug\net7.0\CoRWithCommand_1.csproj.CoreCompileInputs.cache
+C:\Users\Gregapos\Projects\Patterns\CoRWithCommand_1\CoRWithCommand_1\obj\Debug\net7.0\CoRWithCommand_1.dll
+C:\Users\Gregapos\Projects\Patterns\CoRWithCommand_1\CoRWithCommand_1\obj\Debug\net7.0\refint\CoRWithCommand_1.dll
+C:\Users\Gregapos\Projects\Patterns\CoRWithCommand_1\CoRWithCommand_1\obj\Debug\net7.0\CoRWithCommand_1.pdb
+C:\Users\Gregapos\Projects\Patterns\CoRWithCommand_1\CoRWithCommand_1\obj\Debug\net7.0\CoRWithCommand_1.genruntimeconfig.cache
+C:\Users\Gregapos\Projects\Patterns\CoRWithCommand_1\CoRWithCommand_1\obj\Debug\net7.0\ref\CoRWithCommand_1.dll
