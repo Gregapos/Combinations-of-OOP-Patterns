@@ -8,10 +8,13 @@ public abstract class BaseCommand : ICommand
     protected ICommand _nextCommand;
     protected DataProcessingService _service;
 
-    public abstract void Execute(DataRequest request);
+    public virtual void Execute(DataRequest request)
+    {
+        _nextCommand?.Execute(request);
+    }
 }
 
-public class ValidationCommand : BaseHandler
+public class ValidationCommand : BaseCommand
 {
     public ValidationCommand(ICommand nextCommand, DataProcessingService service)
     {
@@ -22,11 +25,11 @@ public class ValidationCommand : BaseHandler
     public override void Execute(DataRequest request)
     {
         _service.Validate(request);
-        _nextCommand?.Execute(request);
+        base.Execute(request);
     }
 }
 
-public class TransformationCommand : BaseHandler
+public class TransformationCommand : BaseCommand
 {
     public TransformationCommand(ICommand nextCommand, DataProcessingService service)
     {
@@ -37,11 +40,11 @@ public class TransformationCommand : BaseHandler
     public override void Execute(DataRequest request)
     {
         _service.Transform(request);
-        _nextCommand?.Execute(request);
+        base.Execute(request);
     }
 }
 
-public class EnrichmentCommand : BaseHandler
+public class EnrichmentCommand : BaseCommand
 {
     public EnrichmentCommand(ICommand nextCommand, DataProcessingService service)
     {
@@ -52,20 +55,20 @@ public class EnrichmentCommand : BaseHandler
     public override void Execute(DataRequest request)
     {
         _service.Enrich(request);
-        _nextCommand?.Execute(request);
+        base.Execute(request);
     }
 }
 
-public class FinalProcessingCommand : BaseHandler
+public class FinalProcessingCommand : BaseCommand
 {
     public FinalProcessingCommand(ICommand nextCommand, DataProcessingService service)
     {
         _service = service;
     }
-    
+
     public override void Execute(DataRequest request)
     {
         _service.Process(request);
-        _nextCommand?.Execute(request);
+        base.Execute(request);
     }
 }
