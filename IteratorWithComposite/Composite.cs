@@ -2,9 +2,8 @@ using System.Runtime.CompilerServices;
 
 public abstract class IFileSystemItem
 {
-    public string Name {set; get;}
+    public string Name { set; get; }
     public abstract void Execute();
-    // public virtual void PushItemToStack(Stack<IFileSystemItem> stack) {return;}
 }
 
 public interface IIterableCollection
@@ -37,7 +36,8 @@ public class Directory : IFileSystemItem, IIterableCollection
     public override void Execute()
     {
         Console.WriteLine($"Opened Directory: {Name}");
-        foreach(var item in items){
+        foreach (var item in items)
+        {
             item.Execute();
         }
     }

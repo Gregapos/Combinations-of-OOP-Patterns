@@ -2,7 +2,8 @@
 
 public class Program
 {
-    public static void Main(){
+    public static void Main()
+    {
         var root = new Directory("root");
         var subDir1 = new Directory("subDir1");
         var subDir2 = new Directory("subDir2");
@@ -16,9 +17,8 @@ public class Program
         root.Add(subDir2);
         root.Add(file3);
 
-        // Using DepthFirstFileIterator
         var depthFirstIterator = root.createDFIterator();
-    
+
         while (depthFirstIterator.HasMore())
         {
             var item = depthFirstIterator.GetNext();

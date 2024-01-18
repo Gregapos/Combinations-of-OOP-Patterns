@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vdcVnWfEIRPJZppoVAm/fP+wRl8qARtc2zRNilqw+CzlmLepfwJIXIINVC/92Mxt7uv9pN/hhDhWxlADJQ8X4g==",
+  "dgSpecHash": "87xuBw9Umrzoo2RYtjrhXVkR6PkdJvoP65e6B+PSYYVZAVcsbWcA0LWT7++o2dCXMaKtlq6+tpQHHldLsQJ+LA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Gregapos\\Projects\\Combinations-of-OOP-Patterns\\IteratorWithFactory\\IteratorWithFactory.csproj",
+  "projectFilePath": "C:\\Users\\Gregapos\\Projects\\Patterns\\IteratorWithFactory\\IteratorWithFactory.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

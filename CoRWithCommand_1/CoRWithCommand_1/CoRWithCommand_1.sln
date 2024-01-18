@@ -5,6 +5,8 @@ VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoRWithCommand_1", "CoRWithCommand_1.csproj", "{116A0FBB-59C4-48F1-98DF-576072DEA19D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandWithMemento", "..\..\CommandWithMemento\CommandWithMemento.csproj", "{5235AE2D-EC73-497A-9425-2D4E76EE0E30}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{116A0FBB-59C4-48F1-98DF-576072DEA19D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{116A0FBB-59C4-48F1-98DF-576072DEA19D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{116A0FBB-59C4-48F1-98DF-576072DEA19D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5235AE2D-EC73-497A-9425-2D4E76EE0E30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5235AE2D-EC73-497A-9425-2D4E76EE0E30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5235AE2D-EC73-497A-9425-2D4E76EE0E30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5235AE2D-EC73-497A-9425-2D4E76EE0E30}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

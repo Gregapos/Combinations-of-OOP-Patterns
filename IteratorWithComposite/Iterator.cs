@@ -24,7 +24,6 @@ public class DepthFirstFileIterator : IIterator
 
         var current = stack.Pop();
 
-        //current.PushItemToStack(stack);
         if (current is Directory directory)
         {
             foreach (var element in directory.GetItems().AsEnumerable().Reverse())

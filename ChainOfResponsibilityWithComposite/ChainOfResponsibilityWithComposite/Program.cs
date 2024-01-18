@@ -14,8 +14,8 @@ public class Program
         subPanel.AddComponent(button1);
         mainPanel.AddComponent(button2);
 
-        button1.HandleEvent("Scroll");  
-        button2.HandleEvent("Click");   
-        button1.HandleEvent("Resize"); 
+        button1.HandleEvent("Scroll");
+        button2.HandleEvent("Click");
+        button1.HandleEvent("Resize");
     }
 }
