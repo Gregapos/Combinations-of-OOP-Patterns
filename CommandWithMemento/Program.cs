@@ -2,18 +2,19 @@
 {
     static void Main(string[] args)
     {
-        TextEditor editor = new TextEditor();
-        CommandManager commandManager = new CommandManager();
+        TextService service = new TextService();
+        CommandInvoker invoker = new CommandInvoker();
 
-        commandManager.ExecuteCommand(new AddTextCommand(editor, "First Addition|"));
-        commandManager.ExecuteCommand(new AddTextCommand(editor, "Second Addition|"));
 
-        Console.WriteLine("Content: " + editor.Content);
+        invoker.Execute(new AddTextCommand(service, "Lorem Ipsum is simply dummy text of the printing and typesetting industry."));
+        invoker.Execute(new AddTextCommand(service, "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."));
 
-        commandManager.Undo();
-        Console.WriteLine("After Undo: " + editor.Content);
+        Console.WriteLine("Content: " + service.Content);
 
-        commandManager.Undo();
-        Console.WriteLine("After Undo: " + editor.Content);
+        while (!invoker.IsEmpty())
+        {
+            invoker.Undo();
+            Console.WriteLine("After Undo: " + service.Content);
+        }
     }
 }

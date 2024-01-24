@@ -1,0 +1,15 @@
+C:\Users\Gregapos\Projects\Patterns\Combo\Combo\bin\Debug\net7.0\Combo.exe
+C:\Users\Gregapos\Projects\Patterns\Combo\Combo\bin\Debug\net7.0\Combo.deps.json
+C:\Users\Gregapos\Projects\Patterns\Combo\Combo\bin\Debug\net7.0\Combo.runtimeconfig.json
+C:\Users\Gregapos\Projects\Patterns\Combo\Combo\bin\Debug\net7.0\Combo.dll
+C:\Users\Gregapos\Projects\Patterns\Combo\Combo\bin\Debug\net7.0\Combo.pdb
+C:\Users\Gregapos\Projects\Patterns\Combo\Combo\obj\Debug\net7.0\Combo.csproj.AssemblyReference.cache
+C:\Users\Gregapos\Projects\Patterns\Combo\Combo\obj\Debug\net7.0\Combo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gregapos\Projects\Patterns\Combo\Combo\obj\Debug\net7.0\Combo.AssemblyInfoInputs.cache
+C:\Users\Gregapos\Projects\Patterns\Combo\Combo\obj\Debug\net7.0\Combo.AssemblyInfo.cs
+C:\Users\Gregapos\Projects\Patterns\Combo\Combo\obj\Debug\net7.0\Combo.csproj.CoreCompileInputs.cache
+C:\Users\Gregapos\Projects\Patterns\Combo\Combo\obj\Debug\net7.0\Combo.dll
+C:\Users\Gregapos\Projects\Patterns\Combo\Combo\obj\Debug\net7.0\refint\Combo.dll
+C:\Users\Gregapos\Projects\Patterns\Combo\Combo\obj\Debug\net7.0\Combo.pdb
+C:\Users\Gregapos\Projects\Patterns\Combo\Combo\obj\Debug\net7.0\Combo.genruntimeconfig.cache
+C:\Users\Gregapos\Projects\Patterns\Combo\Combo\obj\Debug\net7.0\ref\Combo.dll

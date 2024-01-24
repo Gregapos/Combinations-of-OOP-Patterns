@@ -6,34 +6,34 @@ public interface ICommand
 
 public class AddTextCommand : ICommand
 {
-    private TextEditor _editor;
-    private string _textToAdd;
-    private EditorMemento _backup;
+    private TextService _service;
+    private string _newText;
+    private Memento _backup;
 
-    public AddTextCommand(TextEditor editor, string textToAdd)
+    public AddTextCommand(TextService service, string newText)
     {
-        _editor = editor;
-        _textToAdd = textToAdd;
+        _service = service;
+        _newText = newText;
     }
 
     public void Execute()
     {
-        _backup = _editor.Save();
-        _editor.Content += _textToAdd;
+        _backup = _service.Save();
+        _service.Content += _newText;
     }
 
     public void Undo()
     {
-        _editor.Restore(_backup);
+        _service.Restore(_backup);
     }
 }
 
 // Invoker(Command) and Caretaker(Memento)
-public class CommandManager
+public class CommandInvoker
 {
     private Stack<ICommand> _commands = new Stack<ICommand>();
 
-    public void ExecuteCommand(ICommand command)
+    public void Execute(ICommand command)
     {
         command.Execute();
         _commands.Push(command);
@@ -46,5 +46,10 @@ public class CommandManager
             var command = _commands.Pop();
             command.Undo();
         }
+    }
+
+    public bool IsEmpty()
+    {
+        return _commands.Count == 0;
     }
 }

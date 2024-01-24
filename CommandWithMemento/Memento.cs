@@ -1,24 +1,24 @@
-public class EditorMemento
+public class Memento
 {
     public string Content { get; private set; }
 
-    public EditorMemento(string content)
+    public Memento(string content)
     {
         Content = content;
     }
 }
 
 // Originator class
-public class TextEditor
+public class TextService
 {
     public string Content { get; set; }
 
-    public EditorMemento Save()
+    public Memento Save()
     {
-        return new EditorMemento(Content);
+        return new Memento(Content);
     }
 
-    public void Restore(EditorMemento memento)
+    public void Restore(Memento memento)
     {
         Content = memento.Content;
     }
