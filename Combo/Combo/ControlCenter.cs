@@ -1,7 +1,7 @@
 public class ControlCenter
 {
     private static ControlCenter instance;
-    private Strategy _strategy;
+    private IStrategy _strategy;
     public static ControlCenter GetInstance()
     {
         if (instance == null)
@@ -10,8 +10,7 @@ public class ControlCenter
         }
         return instance;
     }
-
-    public void setStrategy(Strategy strategy) => _strategy = strategy;
+    public void SetStrategy(IStrategy strategy) => _strategy = strategy;
     public void ReceiveAlert(string zoneName, string leafName)
     {
         Console.WriteLine($"DANGER! {leafName} detected something in {zoneName}");

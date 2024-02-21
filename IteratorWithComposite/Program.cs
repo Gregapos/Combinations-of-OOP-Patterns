@@ -4,9 +4,9 @@ public class Program
 {
     public static void Main()
     {
-        var root = new Directory("root");
-        var subDir1 = new Directory("subDir1");
-        var subDir2 = new Directory("subDir2");
+        var root = new Folder("root");
+        var subDir1 = new Folder("subDir1");
+        var subDir2 = new Folder("subDir2");
         var file1 = new File("file1");
         var file2 = new File("file2");
         var file3 = new File("file3");

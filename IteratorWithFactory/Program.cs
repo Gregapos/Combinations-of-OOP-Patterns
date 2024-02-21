@@ -25,7 +25,6 @@ class Program
         {
             Console.Write(heapIterator.GetNext() + " ");
         }
-        Console.WriteLine();
     }
 }
 

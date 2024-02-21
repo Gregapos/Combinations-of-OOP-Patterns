@@ -3,16 +3,14 @@ using System.Net.Mail;
 public abstract class SecurityComponent
 {
     public string Name { get; private set; }
-    protected ControlCenter _controlCenter;
     protected State _state;
     public SecurityComponent(string name)
     {
         Name = name;
-        _controlCenter = ControlCenter.GetInstance();
     }
     public virtual void SetState(State state) => _state = state;
     public virtual void Detect() => _state.Detect(Name);
-    public virtual void Alert(string leafName) => _controlCenter.ReceiveAlert(Name, leafName);
+    public virtual void Alert(string leafName) => ControlCenter.GetInstance().ReceiveAlert(Name, leafName);
     public virtual void Log(string leafName) => Console.WriteLine($"{Name}: Detection from {leafName}");
 }
 
@@ -46,6 +44,7 @@ public class SecurityComponentZone : SecurityComponent
 
     public override void SetState(State state)
     {
+        _state = state;
         foreach (var component in _children)
         {
             component.SetState(state);

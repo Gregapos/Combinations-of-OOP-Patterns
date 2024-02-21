@@ -1,71 +1,98 @@
 using System.ComponentModel;
 
-public interface IUIComponent
+public abstract class UIComponent
 {
-    public IUIComponent Parent {get; set;}
+    protected string name;
+    protected List<string> _handleableEvents = new List<string> { "Click" };
+    public UIComponent Parent { get; set; }
 
-    public void HandleEvent(string uiEvent);
-}
-
-public class Button : IUIComponent
-{
-    private string name;
-    public IUIComponent Parent {get; set;}
-    private List<string> _handableEvents = new List<string>{"Click"};
-
-    public Button(string name)
+    public UIComponent(string name)
     {
         this.name = name;
     }
 
-    public void HandleEvent(string uiEvent)
+    public virtual void HandleEvent(string uiEvent)
     {
-        if (_handableEvents.Contains(uiEvent))
+        Parent.HandleEvent(uiEvent);
+    }
+}
+
+public class Button : UIComponent
+{
+    public Button(string name) : base(name) { }
+
+    public override void HandleEvent(string uiEvent)
+    {
+        if (uiEvent == "Click")
         {
             Console.WriteLine($"Event handled by {name}");
-            return;
+            Click();
         }
         else if (Parent != null)
-        {
-            Parent.HandleEvent(uiEvent);
-            return;
-        }
-        
-        Console.WriteLine($"{name}: Event can't be handled.");
+            base.HandleEvent(uiEvent);
+
+        else
+            Console.WriteLine($"{name}: Event can't be handled.");
+    }
+
+    private void Click()
+    {
+        Console.WriteLine($"{name}: Clicked.");
     }
 }
 
-public class Panel : IUIComponent
+public class Panel : UIComponent
 {
-    private string name;
-    public IUIComponent Parent {get; set;}
-    private List<string> _handableEvents = new List<string>{"Scroll", "Close"};
-    private List<IUIComponent> _children = new List<IUIComponent>();
+    private List<UIComponent> _children = new List<UIComponent>();
 
-    public Panel(string name)
+    public Panel(string name) : base(name)
     {
-        this.name = name;
+        _handleableEvents.AddRange(new string[] { "Scroll", "Close" });
     }
 
-    public void AddComponent(IUIComponent component)
+    public void AddComponent(UIComponent component)
     {
         _children.Add(component);
         component.Parent = this;
     }
 
-    public void HandleEvent(string uiEvent)
+    public override void HandleEvent(string uiEvent)
     {
-        if (_handableEvents.Contains(uiEvent))
+        if (_handleableEvents.Contains(uiEvent))
         {
             Console.WriteLine($"Event handled by {name}");
-            return;
+            switch (uiEvent)
+            {
+                case "Click":
+                    Click();
+                    break;
+                case "Scroll":
+                    Scroll();
+                    break;
+                case "Close":
+                    Close();
+                    break;
+            }
         }
         else if (Parent != null)
-        {
-            Parent.HandleEvent(uiEvent);
-            return;
-        }
+            base.HandleEvent(uiEvent);
         
-        Console.WriteLine($"{name}: Event can't be handled.");
+        else
+            Console.WriteLine($"{name}: Event can't be handled.");
+    }
+
+    private void Click()
+    {
+        Console.WriteLine($"{name}: Clicked.");
+    }
+
+    private void Scroll()
+    {
+        Console.WriteLine($"{name}: Scrolling.");
+    }
+
+    private void Close()
+    {
+        Console.WriteLine($"{name}: Closed.");
     }
 }

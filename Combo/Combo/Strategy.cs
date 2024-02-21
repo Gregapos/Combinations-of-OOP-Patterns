@@ -1,9 +1,9 @@
-public interface Strategy
+public interface IStrategy
 {
     public void Alert();
 }
 
-public class AlertPoliceStrategy : Strategy
+public class AlertPoliceStrategy : IStrategy
 {
     public void Alert()
     {
@@ -11,7 +11,7 @@ public class AlertPoliceStrategy : Strategy
     }
 }
 
-public class SirenStrategy : Strategy
+public class SirenStrategy : IStrategy
 {
     public void Alert()
     {

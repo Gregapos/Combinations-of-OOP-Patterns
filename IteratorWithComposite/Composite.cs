@@ -1,8 +1,13 @@
 using System.Runtime.CompilerServices;
 
-public abstract class IFileSystemItem
+public abstract class FileSystemNode
 {
     public string Name { set; get; }
+
+    protected FileSystemNode(string name)
+    {
+        Name = name;
+    }
     public abstract void Execute();
 }
 
@@ -11,50 +16,37 @@ public interface IIterableCollection
     public IIterator createDFIterator();
 }
 
-public class File : IFileSystemItem
+public class File : FileSystemNode
 {
-    public File(string name)
-    {
-        Name = name;
-    }
-
+    public File(string name) : base(name) { }
     public override void Execute()
     {
         Console.WriteLine($"Opened File: {Name}");
     }
 }
 
-public class Directory : IFileSystemItem, IIterableCollection
+public class Folder : FileSystemNode, IIterableCollection
 {
-    private List<IFileSystemItem> items = new List<IFileSystemItem>();
+    public List<FileSystemNode> Children { get; } = new List<FileSystemNode>();
 
-    public Directory(string name)
-    {
-        Name = name;
-    }
-
+    public Folder(string name) : base(name) { }
     public override void Execute()
     {
-        Console.WriteLine($"Opened Directory: {Name}");
-        foreach (var item in items)
+        Console.WriteLine($"Opened Folder: {Name}");
+        foreach (var node in Children)
         {
-            item.Execute();
+            node.Execute();
         }
     }
 
-    public void Add(IFileSystemItem item)
+    public void Add(FileSystemNode node)
     {
-        items.Add(item);
+        Children.Add(node);
     }
 
-    public void Remove(IFileSystemItem item)
+    public void Remove(FileSystemNode node)
     {
-        items.Remove(item);
-    }
-
-    public List<IFileSystemItem> GetItems()
-    {
-        return items;
+        Children.Remove(node);
     }
 
     public IIterator createDFIterator()

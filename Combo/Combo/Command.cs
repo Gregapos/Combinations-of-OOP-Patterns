@@ -3,31 +3,33 @@ public interface ICommand
     public void Execute();
 }
 
-public class LockCommand : ICommand
+public abstract class BaseCommand : ICommand
 {
-    private SecurityComponent component;
+    protected SecurityComponent component;
+    public virtual void Execute() { }
+}
 
+public class LockCommand : BaseCommand
+{
     public LockCommand(SecurityComponent component)
     {
         this.component = component;
     }
 
-    public void Execute()
+    public override void Execute()
     {
         component.SetState(new LockedState(component));
     }
 }
 
-public class UnlockCommand : ICommand
+public class UnlockCommand : BaseCommand
 {
-    private SecurityComponent component;
-
     public UnlockCommand(SecurityComponent component)
     {
         this.component = component;
     }
 
-    public void Execute()
+    public override void Execute()
     {
         component.SetState(new UnlockedState(component));
     }

@@ -2,8 +2,8 @@
 {
     static void Main(string[] args)
     {
-        var center = ControlCenter.GetInstance();
-        center.setStrategy(new AlertPoliceStrategy());
+        //var center = ControlCenter.GetInstance();
+        ControlCenter.GetInstance().SetStrategy(new AlertPoliceStrategy());
 
         var camera1 = new Camera("camera1");
         var camera2 = new Camera("camera2");
@@ -17,10 +17,13 @@
         zone1.AddChild(camera1).AddChild(sensor1);
         mainZone.AddChild(camera2).AddChild(zone1);
 
-        center.ExecuteCommand(new UnlockCommand(mainZone));
+        ControlCenter.GetInstance().ExecuteCommand(new UnlockCommand(mainZone));
+        ControlCenter.GetInstance().ExecuteCommand(new LockCommand(zone1));
 
-        center.ExecuteCommand(new LockCommand(zone1));
         camera1.Detect();
         camera2.Detect();
+
+        ControlCenter.GetInstance().SetStrategy(new SirenStrategy());
+        sensor1.Detect();
     }
 }

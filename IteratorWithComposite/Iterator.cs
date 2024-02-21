@@ -1,14 +1,14 @@
 public interface IIterator
 {
     bool HasMore();
-    IFileSystemItem GetNext();
+    FileSystemNode GetNext();
 }
 
 public class DepthFirstFileIterator : IIterator
 {
-    private Stack<IFileSystemItem> stack = new Stack<IFileSystemItem>();
+    private Stack<FileSystemNode> stack = new Stack<FileSystemNode>();
 
-    public DepthFirstFileIterator(Directory root)
+    public DepthFirstFileIterator(Folder root)
     {
         stack.Push(root);
     }
@@ -18,15 +18,15 @@ public class DepthFirstFileIterator : IIterator
         return stack.Count > 0;
     }
 
-    public IFileSystemItem GetNext()
+    public FileSystemNode GetNext()
     {
         if (!HasMore()) return null;
 
         var current = stack.Pop();
 
-        if (current is Directory directory)
+        if (current is Folder Folder)
         {
-            foreach (var element in directory.GetItems().AsEnumerable().Reverse())
+            foreach (var element in Folder.Children.AsEnumerable().Reverse())
             {
                 stack.Push(element);
             }

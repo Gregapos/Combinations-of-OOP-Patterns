@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ld3GX4ZP0Rl5xX0cZ2JAzqX3rrHcDuA14vabgjy/aKHQfQU4yeZ3VIvICjlQPcE+H52FC2rNqpWdaiFzaLXfjQ==",
+  "dgSpecHash": "ZvqZT8X9pCs759HKxVjRGYLgHXkcwLvO/Weet1AwAMH6wjWUsWplqfwZGJfZ1JEZiimNqcWSpRF/0Jyxq/6JYA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Gregapos\\Projects\\Combinations-of-OOP-Patterns\\CompositeWithVisitor\\CompositeWithVisitor.csproj",
+  "projectFilePath": "C:\\Users\\Gregapos\\Projects\\Patterns\\CompositeWithVisitor\\CompositeWithVisitor.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
