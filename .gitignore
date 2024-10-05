@@ -1,0 +1,13 @@
+# Ignore .vscode folder
+.vscode/
+
+# Ignore .prettierrc file
+.prettierrc
+
+# Ignore desktop.ini files
+desktop.ini
+
+# Ignore bin and obj folders
+**/bin/
+**/obj/
+**/.vs/

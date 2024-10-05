@@ -31,7 +31,6 @@ public class DepthFirstFileIterator : IIterator
                 stack.Push(element);
             }
         }
-
         return current;
     }
 }
