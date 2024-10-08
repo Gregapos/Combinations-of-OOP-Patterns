@@ -11,7 +11,9 @@ This project demonstrates the combination of the **Chain of Responsibility** and
 ## Key Elements of the Combination
 
 - **`BaseCommand`** Abstract Class: Defines the default behavior of all the chain handlers.
+
 - **`ValidationCommand, TransformationCommand, EnrichmentCommand & FinalProcessingCommand`** Classes: Command types that represent different processing stages.
+
 - **`DataRequest`** Class: Represent the data being processed.
 
 ## Benefits of the Combination

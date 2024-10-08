@@ -11,7 +11,9 @@ This project demonstrates the combination of the **Iterator** and **Composite** 
 ## Key Elements of the Combination
 
 - **`FileSystemNode`** Abstract Class: Represents all the node types.
+
 - **`File & Folder`** Classes: Implementions for the leaf and composite objects respectively.
+
 - **`IIterableCollection & IIterator`** Interfaces: They provide a standardized way to traverse elements of the hierarchy without exposing the underlying structure.
 
 ## Benefits of the Combination

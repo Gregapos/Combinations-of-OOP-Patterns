@@ -5,11 +5,13 @@ This project demonstrates the combination of the **Chain of Responsibility** and
 ## Design Patterns Overview
 
 - **Chain of Responsibility**: The Chain of Responsibility pattern allows for passing events - requests along a chain of nodes - handlers (The event is passed from a node, to it's parent node). Each handler can either process the request or pass it to the next handler in the chain.
+
 - **Composite**: The Composite pattern provides a unified interface to manage both composite (objects that contain other objects) and leaf objects (individual objects). It allows clients to treat individual objects and compositions of objects uniformly, in order to serve the event propagation mechanism.
 
 ## Key Elements of the Combination
 
 - **`UIComponent`** Abstract Class: Represents all the UI component types and contains a \_handleableEvents list that maintains the events that each component can handle by itself.
+
 - **`Button & Panel`** Classes: Implementions for the leaf and composite objects respectively.
 
 ## Benefits of the Combination

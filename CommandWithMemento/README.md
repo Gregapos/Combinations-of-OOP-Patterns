@@ -11,8 +11,11 @@ This project demonstrates the combination of the **Command** and **Memento** des
 ## Key Elements of the Combination
 
 - **`AddTextCommand`** Class: Command type that adds text to another text.
+
 - **`CommandInvoker`** Class: Manages the execution of commands and stores mementos for undo operations, acting both as Invoker for the Command pattern and as Caretaker for the Memento pattern.
+
 - **`Memento`** Class: Captures the internal state of an object so that it can be restored later.
+
 - **`TextService`** Class: Acts as the Originator and maintains the content of the entire text.
 
 ## Benefits of the Combination

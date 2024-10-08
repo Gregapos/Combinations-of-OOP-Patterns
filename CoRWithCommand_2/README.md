@@ -11,8 +11,11 @@ This project demonstrates the combination of the **Chain of Responsibility** and
 ## Key Elements of the Combination
 
 - **`BaseDepartmentHandler`** Abstract Class: Defines the default behavior of all the chain handlers.
+
 - **`HRDepartment, FinanceDepartment & LegalDepartment`** Classes: Handler types.
+
 - **`DocumentSigningCommand`** Class: Command type.
+
 - **`DocumentService`** Class: Performs the actual operations on the documents.
 
 ## Benefits of the Combination

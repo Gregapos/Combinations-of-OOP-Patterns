@@ -11,8 +11,11 @@ This project demonstrates the combination of the **Composite** and **Visitor** d
 ## Key Elements of the Combination
 
 - **`Employee`** Abstract Class: Represents all the node types.
+
 - **`Developer, Designer & Manager`** Classes: Node types that represent different employee roles.
+
 - **`Department`** Class: Composite object.
+
 - **`IEmployeeVisitor`** Interface: Declare a method for visiting each type of element in the Composite structure. Concrete visitors implement these methods to perform specific operations on each node.
 
 ## Benefits of the Combination

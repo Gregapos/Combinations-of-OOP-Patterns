@@ -5,12 +5,15 @@ This project demonstrates the combination of the **Builder** and **Abstract Fact
 ## Design Patterns Overview
 
 - **Builder**: The Builder pattern allows for step-by-step construction of complex objects. It separates the construction process from the representation, enabling the same construction procedure to create different configurations of the same type of object.
+
 - **Abstract Factory**: The Abstract Factory pattern provides an interface for creating families of related or dependent objects without specifying their concrete classes.
 
 ## Key Elements of the Combination
 
 - **`AbstractFactory`** Interface: Declares methods for creating related or dependent objects.
+
 - **`ComputerBuilder`** Class: Implements the `Builder` interface, assembling the respective parts to a final product.
+
 - **`Director`** Class: Orchestrates the building process.
 
 ## Benefits of the Combination

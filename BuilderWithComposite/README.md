@@ -5,12 +5,15 @@ This project demonstrates the combination of the **Builder** and **Composite** d
 ## Design Patterns Overview
 
 - **Builder**: The Builder pattern encapsulates the construction logic of the hierarchical structure.
+
 - **Composite**: The Composite pattern provides a unified interface to manage both composite (objects that contain other objects) and leaf objects (individual objects). It allows clients to treat individual objects and compositions of objects uniformly.
 
 ## Key Elements of the Combination
 
 - **`FileSystemNode`** Abstract Class: Declares common behavior for both composite and leaf objects.
+
 - **`File & Folder`** Classes: Implementions for the leaf and composite objects respectively.
+
 - **`FileSystemBuilder`** Class: Creates and assembles nodes to build a file system.
 
 ## Benefits of the Combination
